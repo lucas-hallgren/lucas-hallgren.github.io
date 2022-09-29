@@ -1,0 +1,101 @@
+/* Importando fontes */ 
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,700&family=Montserrat:wght@300;400;700&family=Oswald:wght@300;400;600&family=Rubik:wght@300;400;600&display=swap');
+
+/* Deixando salvo os font-family para usar 
+    font-family: 'Fraunces', serif;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-family: 'Rubik', sans-serif;
+*/
+
+/* Reset CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Definição de variáveis para as cores */
+:root {
+    --dark1:  #262626;
+    --dark2:  #575656;
+    --light1: #FFFFFF;
+    --light2: #eeeeee88;
+    --main1: #71E3DB;
+    /*background-image: linear-gradient(var(--dark1), var(--dark2)); para ideia*/
+    background: var(--dark2);
+}
+
+/* Definindo a estilização da navbar */
+header.navbar {
+    display: flex;
+    margin: 4vh 8vw;
+    align-items: center;
+    /*background-color: #000000;/* /*Apagar depois*/
+}
+
+header.navbar img.icon {
+    width: 180px;       
+    margin: 0 2em;
+}
+
+header.navbar div.itens {
+    flex: 5;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3vw;
+}
+
+header.navbar div.itens a {
+    padding: 1% 1%;
+    margin: 1%;
+    /*background: grey;/* /*Apagar depois*/
+    border-radius: 15px;
+    color: white;
+    font-size: 2em;
+    font-family: 'Oswald', sans-serif;
+}
+
+header.navbar div.itens a.contato {
+    border: 1px white solid;
+    animation: pulse 2s ease-out infinite;
+}
+
+header.navbar div.itens a.contato:hover {
+    animation-name: pulse 2s 3s ease-out infinite;;
+    animation-timing-function: ease;
+}
+
+@keyframes pulse {
+    0%   { transform: translateY(0);  }
+    50%  { transform: translateY(-3px); }
+    100% { transform: translateY(0); }
+  }
+
+div.social img.social-icon {
+    width: 45px;
+    /*background-color: grey;/* /*Apagar depois*/
+    margin: 0.5em;
+}
+
+/* Começando a estilizar o conteúdo principal da página */
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+main div.about {
+    display: flex;
+    flex-direction: column;
+    margin: 4vh 8vw;
+    color: var(--light1);
+}
+
+main div.about h1 {
+    font-family: 'Oswald', sans-serif;
+}
